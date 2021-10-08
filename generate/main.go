@@ -9,6 +9,10 @@ import (
 
 const rawTemplate = `type {{ .Name }} {{ .Type }}
 
+func New{{ .Name }}(v {{ .Type }}) *{{ .Name }} {
+	return (*{{ .Name }})(&v)
+}
+
 func (v *{{ .Name }}) Value() {{ .Type }} {
 	if v == nil {
 		var zero {{ .Type }}

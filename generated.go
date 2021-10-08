@@ -2,6 +2,10 @@ package nulls
 
 type Bool bool
 
+func NewBool(v bool) *Bool {
+	return (*Bool)(&v)
+}
+
 func (v *Bool) Value() bool {
 	if v == nil {
 		var zero bool
@@ -23,6 +27,10 @@ func (v *Bool) Ok() (bool, bool) {
 }
 
 type String string
+
+func NewString(v string) *String {
+	return (*String)(&v)
+}
 
 func (v *String) Value() string {
 	if v == nil {
@@ -46,6 +54,10 @@ func (v *String) Ok() (string, bool) {
 
 type Int int
 
+func NewInt(v int) *Int {
+	return (*Int)(&v)
+}
+
 func (v *Int) Value() int {
 	if v == nil {
 		var zero int
@@ -67,6 +79,10 @@ func (v *Int) Ok() (int, bool) {
 }
 
 type Int8 int8
+
+func NewInt8(v int8) *Int8 {
+	return (*Int8)(&v)
+}
 
 func (v *Int8) Value() int8 {
 	if v == nil {
@@ -90,6 +106,10 @@ func (v *Int8) Ok() (int8, bool) {
 
 type Int16 int16
 
+func NewInt16(v int16) *Int16 {
+	return (*Int16)(&v)
+}
+
 func (v *Int16) Value() int16 {
 	if v == nil {
 		var zero int16
@@ -111,6 +131,10 @@ func (v *Int16) Ok() (int16, bool) {
 }
 
 type Int32 int32
+
+func NewInt32(v int32) *Int32 {
+	return (*Int32)(&v)
+}
 
 func (v *Int32) Value() int32 {
 	if v == nil {
@@ -134,6 +158,10 @@ func (v *Int32) Ok() (int32, bool) {
 
 type Int64 int64
 
+func NewInt64(v int64) *Int64 {
+	return (*Int64)(&v)
+}
+
 func (v *Int64) Value() int64 {
 	if v == nil {
 		var zero int64
@@ -155,6 +183,10 @@ func (v *Int64) Ok() (int64, bool) {
 }
 
 type Uint uint
+
+func NewUint(v uint) *Uint {
+	return (*Uint)(&v)
+}
 
 func (v *Uint) Value() uint {
 	if v == nil {
@@ -178,6 +210,10 @@ func (v *Uint) Ok() (uint, bool) {
 
 type Uint8 uint8
 
+func NewUint8(v uint8) *Uint8 {
+	return (*Uint8)(&v)
+}
+
 func (v *Uint8) Value() uint8 {
 	if v == nil {
 		var zero uint8
@@ -199,6 +235,10 @@ func (v *Uint8) Ok() (uint8, bool) {
 }
 
 type Uint16 uint16
+
+func NewUint16(v uint16) *Uint16 {
+	return (*Uint16)(&v)
+}
 
 func (v *Uint16) Value() uint16 {
 	if v == nil {
@@ -222,6 +262,10 @@ func (v *Uint16) Ok() (uint16, bool) {
 
 type Uint32 uint32
 
+func NewUint32(v uint32) *Uint32 {
+	return (*Uint32)(&v)
+}
+
 func (v *Uint32) Value() uint32 {
 	if v == nil {
 		var zero uint32
@@ -243,6 +287,10 @@ func (v *Uint32) Ok() (uint32, bool) {
 }
 
 type Uint64 uint64
+
+func NewUint64(v uint64) *Uint64 {
+	return (*Uint64)(&v)
+}
 
 func (v *Uint64) Value() uint64 {
 	if v == nil {
@@ -266,6 +314,10 @@ func (v *Uint64) Ok() (uint64, bool) {
 
 type Uintptr uintptr
 
+func NewUintptr(v uintptr) *Uintptr {
+	return (*Uintptr)(&v)
+}
+
 func (v *Uintptr) Value() uintptr {
 	if v == nil {
 		var zero uintptr
@@ -287,6 +339,10 @@ func (v *Uintptr) Ok() (uintptr, bool) {
 }
 
 type Byte byte
+
+func NewByte(v byte) *Byte {
+	return (*Byte)(&v)
+}
 
 func (v *Byte) Value() byte {
 	if v == nil {
@@ -310,6 +366,10 @@ func (v *Byte) Ok() (byte, bool) {
 
 type Rune rune
 
+func NewRune(v rune) *Rune {
+	return (*Rune)(&v)
+}
+
 func (v *Rune) Value() rune {
 	if v == nil {
 		var zero rune
@@ -331,6 +391,10 @@ func (v *Rune) Ok() (rune, bool) {
 }
 
 type Float32 float32
+
+func NewFloat32(v float32) *Float32 {
+	return (*Float32)(&v)
+}
 
 func (v *Float32) Value() float32 {
 	if v == nil {
@@ -354,6 +418,10 @@ func (v *Float32) Ok() (float32, bool) {
 
 type Float64 float64
 
+func NewFloat64(v float64) *Float64 {
+	return (*Float64)(&v)
+}
+
 func (v *Float64) Value() float64 {
 	if v == nil {
 		var zero float64
@@ -375,6 +443,10 @@ func (v *Float64) Ok() (float64, bool) {
 }
 
 type Complex64 complex64
+
+func NewComplex64(v complex64) *Complex64 {
+	return (*Complex64)(&v)
+}
 
 func (v *Complex64) Value() complex64 {
 	if v == nil {
@@ -398,6 +470,10 @@ func (v *Complex64) Ok() (complex64, bool) {
 
 type Complex128 complex128
 
+func NewComplex128(v complex128) *Complex128 {
+	return (*Complex128)(&v)
+}
+
 func (v *Complex128) Value() complex128 {
 	if v == nil {
 		var zero complex128
@@ -417,3 +493,4 @@ func (v *Complex128) IsNull() bool {
 func (v *Complex128) Ok() (complex128, bool) {
 	return v.Value(), v.IsNull()
 }
+
