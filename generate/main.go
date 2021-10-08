@@ -30,7 +30,7 @@ func (v *{{ .Name }}) IsNull() bool {
 }
 
 func (v *{{ .Name }}) Ok() ({{ .Type }}, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 `
