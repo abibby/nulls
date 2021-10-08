@@ -23,7 +23,7 @@ func (v *Bool) IsNull() bool {
 }
 
 func (v *Bool) Ok() (bool, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type String string
@@ -49,7 +49,7 @@ func (v *String) IsNull() bool {
 }
 
 func (v *String) Ok() (string, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Int int
@@ -75,7 +75,7 @@ func (v *Int) IsNull() bool {
 }
 
 func (v *Int) Ok() (int, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Int8 int8
@@ -101,7 +101,7 @@ func (v *Int8) IsNull() bool {
 }
 
 func (v *Int8) Ok() (int8, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Int16 int16
@@ -127,7 +127,7 @@ func (v *Int16) IsNull() bool {
 }
 
 func (v *Int16) Ok() (int16, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Int32 int32
@@ -153,7 +153,7 @@ func (v *Int32) IsNull() bool {
 }
 
 func (v *Int32) Ok() (int32, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Int64 int64
@@ -179,7 +179,7 @@ func (v *Int64) IsNull() bool {
 }
 
 func (v *Int64) Ok() (int64, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Uint uint
@@ -205,7 +205,7 @@ func (v *Uint) IsNull() bool {
 }
 
 func (v *Uint) Ok() (uint, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Uint8 uint8
@@ -231,7 +231,7 @@ func (v *Uint8) IsNull() bool {
 }
 
 func (v *Uint8) Ok() (uint8, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Uint16 uint16
@@ -257,7 +257,7 @@ func (v *Uint16) IsNull() bool {
 }
 
 func (v *Uint16) Ok() (uint16, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Uint32 uint32
@@ -283,7 +283,7 @@ func (v *Uint32) IsNull() bool {
 }
 
 func (v *Uint32) Ok() (uint32, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Uint64 uint64
@@ -309,7 +309,7 @@ func (v *Uint64) IsNull() bool {
 }
 
 func (v *Uint64) Ok() (uint64, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Uintptr uintptr
@@ -335,7 +335,7 @@ func (v *Uintptr) IsNull() bool {
 }
 
 func (v *Uintptr) Ok() (uintptr, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Byte byte
@@ -361,7 +361,7 @@ func (v *Byte) IsNull() bool {
 }
 
 func (v *Byte) Ok() (byte, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Rune rune
@@ -387,7 +387,7 @@ func (v *Rune) IsNull() bool {
 }
 
 func (v *Rune) Ok() (rune, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Float32 float32
@@ -413,7 +413,7 @@ func (v *Float32) IsNull() bool {
 }
 
 func (v *Float32) Ok() (float32, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Float64 float64
@@ -439,7 +439,7 @@ func (v *Float64) IsNull() bool {
 }
 
 func (v *Float64) Ok() (float64, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Complex64 complex64
@@ -465,7 +465,7 @@ func (v *Complex64) IsNull() bool {
 }
 
 func (v *Complex64) Ok() (complex64, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
 type Complex128 complex128
@@ -491,6 +491,6 @@ func (v *Complex128) IsNull() bool {
 }
 
 func (v *Complex128) Ok() (complex128, bool) {
-	return v.Value(), v.IsNull()
+	return v.Value(), !v.IsNull()
 }
 
