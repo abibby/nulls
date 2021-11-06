@@ -1,5 +1,7 @@
 package nulls
 
+import "fmt"
+
 type Bool bool
 
 func NewBool(v bool) *Bool {
@@ -17,6 +19,15 @@ func (v *Bool) Value() bool {
 func (v *Bool) Bool() bool {
 	return v.Value()
 }
+
+
+func (v *Bool) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Bool) IsNull() bool {
 	return v == nil
@@ -44,6 +55,8 @@ func (v *String) String() string {
 	return v.Value()
 }
 
+
+
 func (v *String) IsNull() bool {
 	return v == nil
 }
@@ -69,6 +82,15 @@ func (v *Int) Value() int {
 func (v *Int) Int() int {
 	return v.Value()
 }
+
+
+func (v *Int) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Int) IsNull() bool {
 	return v == nil
@@ -96,6 +118,15 @@ func (v *Int8) Int8() int8 {
 	return v.Value()
 }
 
+
+func (v *Int8) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Int8) IsNull() bool {
 	return v == nil
 }
@@ -121,6 +152,15 @@ func (v *Int16) Value() int16 {
 func (v *Int16) Int16() int16 {
 	return v.Value()
 }
+
+
+func (v *Int16) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Int16) IsNull() bool {
 	return v == nil
@@ -148,6 +188,15 @@ func (v *Int32) Int32() int32 {
 	return v.Value()
 }
 
+
+func (v *Int32) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Int32) IsNull() bool {
 	return v == nil
 }
@@ -173,6 +222,15 @@ func (v *Int64) Value() int64 {
 func (v *Int64) Int64() int64 {
 	return v.Value()
 }
+
+
+func (v *Int64) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Int64) IsNull() bool {
 	return v == nil
@@ -200,6 +258,15 @@ func (v *Uint) Uint() uint {
 	return v.Value()
 }
 
+
+func (v *Uint) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Uint) IsNull() bool {
 	return v == nil
 }
@@ -225,6 +292,15 @@ func (v *Uint8) Value() uint8 {
 func (v *Uint8) Uint8() uint8 {
 	return v.Value()
 }
+
+
+func (v *Uint8) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Uint8) IsNull() bool {
 	return v == nil
@@ -252,6 +328,15 @@ func (v *Uint16) Uint16() uint16 {
 	return v.Value()
 }
 
+
+func (v *Uint16) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Uint16) IsNull() bool {
 	return v == nil
 }
@@ -277,6 +362,15 @@ func (v *Uint32) Value() uint32 {
 func (v *Uint32) Uint32() uint32 {
 	return v.Value()
 }
+
+
+func (v *Uint32) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Uint32) IsNull() bool {
 	return v == nil
@@ -304,6 +398,15 @@ func (v *Uint64) Uint64() uint64 {
 	return v.Value()
 }
 
+
+func (v *Uint64) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Uint64) IsNull() bool {
 	return v == nil
 }
@@ -329,6 +432,15 @@ func (v *Uintptr) Value() uintptr {
 func (v *Uintptr) Uintptr() uintptr {
 	return v.Value()
 }
+
+
+func (v *Uintptr) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Uintptr) IsNull() bool {
 	return v == nil
@@ -356,6 +468,15 @@ func (v *Byte) Byte() byte {
 	return v.Value()
 }
 
+
+func (v *Byte) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Byte) IsNull() bool {
 	return v == nil
 }
@@ -381,6 +502,15 @@ func (v *Rune) Value() rune {
 func (v *Rune) Rune() rune {
 	return v.Value()
 }
+
+
+func (v *Rune) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Rune) IsNull() bool {
 	return v == nil
@@ -408,6 +538,15 @@ func (v *Float32) Float32() float32 {
 	return v.Value()
 }
 
+
+func (v *Float32) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Float32) IsNull() bool {
 	return v == nil
 }
@@ -433,6 +572,15 @@ func (v *Float64) Value() float64 {
 func (v *Float64) Float64() float64 {
 	return v.Value()
 }
+
+
+func (v *Float64) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Float64) IsNull() bool {
 	return v == nil
@@ -460,6 +608,15 @@ func (v *Complex64) Complex64() complex64 {
 	return v.Value()
 }
 
+
+func (v *Complex64) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
+
 func (v *Complex64) IsNull() bool {
 	return v == nil
 }
@@ -485,6 +642,15 @@ func (v *Complex128) Value() complex128 {
 func (v *Complex128) Complex128() complex128 {
 	return v.Value()
 }
+
+
+func (v *Complex128) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+
 
 func (v *Complex128) IsNull() bool {
 	return v == nil

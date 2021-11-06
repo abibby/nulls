@@ -7,6 +7,12 @@ import (
 	"text/template"
 )
 
+const packageHeader = `package nulls
+
+import "fmt"
+
+`
+
 const rawTemplate = `type {{ .Name }} {{ .Type }}
 
 func New{{ .Name }}(v {{ .Type }}) *{{ .Name }} {
@@ -24,6 +30,15 @@ func (v *{{ .Name }}) Value() {{ .Type }} {
 func (v *{{ .Name }}) {{ .Name }}() {{ .Type }} {
 	return v.Value()
 }
+
+{{ if ne .Name "String" }}
+func (v *{{ .Name }}) String() string {
+	if v == nil {
+		return ""
+	}
+	return fmt.Sprint(v.Value())
+}
+{{ end }}
 
 func (v *{{ .Name }}) IsNull() bool {
 	return v == nil
@@ -66,7 +81,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	file.WriteString("package nulls\n\n")
+	file.WriteString(packageHeader)
 
 	for _, t := range types {
 		err = tpl.Execute(file, Data{Name: titleCase(t), Type: t})
